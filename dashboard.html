@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-card" id="myNavbar">
+            <a href="#home" class="w3-bar-item w3-button w3-wide" style="font-size : 15px"><strong>EMVC</strong></a>
+            <!-- Right-sided navbar links -->
+            <div class="w3-right w3-hide-small">
+                <a href="index.html" class="w3-bar-item w3-button"><strong>HOME</strong></a>
+                <!-- <a href="#register" class="w3-bar-item w3-button" onclick="w3-close"><i class="fa fa-th"></i><strong>BOOK NOW</strong></a>
+                <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i><strong>PRICING</strong></a>
+                <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i><strong>TEAM</strong> </a> -->
+                <a href="#contact" class="w3-bar-item w3-button"><i
+                        class="fa fa-envelope"></i><strong>CONTACT</strong></a>
+            </div>
+            <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+                onclick="w3_open()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
+        style="display:none" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close
+            ×</a>
+        <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
+        <!-- <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+        <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a> -->
+        <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+    </nav>
+
+    <h1 style="text-align: center;" id="log">
+        <strong><u>Book Your Charging Slot/ Battery for Swapping</u></strong>
+    </h1>
+    <div id="register">
+        <div class="w3-container">
+            <form action="#">
+                <label for="name"><b>Name</b></label>
+                <input type="text" placeholder="Name" name="name" id="sname" class="field" required>
+                <br>
+                <label for="regn"><b>RC Number</b></label>
+                <input type="text" placeholder="Regn. Number" name="name" id="regn" class="field" maxlength="12"
+                    required>
+                <br>
+		<label for="email"><b>Email</b></label>
+                <input type="email" placeholder="Email" name="email" id="smail" class="field" required>
+		<br>
+                <label for="chassis"><b>Chassis Number</b></label>
+                <input type="text" placeholder="Chassis Number" name="name" class="field" maxlength="19" required>
+                <br>
+                <label for="Duration"><b>Duration(in mins)</b></label>
+                <input type="number" placeholder="Duration" name="psw" class="field" id="Duration" required>
+                <br>
+                <label for="sdate"><b>Slot Date</b></label>
+                <input type="date" placeholder="Slot Date" name="psw-repeat" class="field" id="sdate" required>
+                <label for="stime"><b>Slot Time</b></label>
+                <input type="time" placeholder="Slot Time" name="psw-repeat" class="field" id="stime" required>
+                <br>
+                <label for="choose"><b>Preference</b></label>
+                <select class="input field" id="pref" placeholder="select">
+                    <option value="slt">Select</option>
+                    <option value="Chg">Charging Slot</option>
+                    <option value="swap">Swap Battery</option>
+                </select>
+                <br>
+                <label for="Location"><b>Location</b></label>
+                <input type="text" placeholder="Location" name="location" class="field" id="locat" required>
+                <br>
+                <label for="upload"><b>Upload Driving License</b></label>
+                <input type="file" placeholder="Confirm Password" name="psw-repeat" class="field" id="file" required>
+            </form>
+            <br>
+            <div>
+                <button class="w3-button w3-black w3-padding-large rndbtn" id="mainbtn" onclick="book()"><a href="#"
+                        class="link">Book Now!!</a></button>
+            </div>
+            <p id="demo"></p>
+        </div>
+    </div>
+    <div>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d39012.85686890069!2d77.29180488471678!3d28.635773196984932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sCharging%20station!5e0!3m2!1sen!2sin!4v1648383574903!5m2!1sen!2sin"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+
+    <!-- Contact Section -->
+    <div class="w3-container w3-light-grey" style="padding:75px 16px" id="contact">
+        <h3 class="w3-center"><u><strong>Contact Us</strong></u></h3>
+        <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+        <div style="margin-top:48px">
+            <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Delhi, India</p>
+            <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +91 9717368616</p>
+            <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+            <br>
+            <form action="/action_page.php" target="_blank">
+                <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+                <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+                <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+                <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+                <p>
+                    <button class="w3-button w3-black" type="submit"><i class="fa fa-paper-plane"></i> SEND
+                        MESSAGE</button>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64">
+        <a href="#log" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <div class="w3-xlarge w3-section">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+        <p>Powered by SQUAD</p>
+    </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("_hB55HIpwiIdk-ZJo");
+        })();
+    </script>
+    <script src="index.js"></script>
+    <script>
+        // import React, { useRef } from 'react';
+        // import emailjs from '@emailjs/browser';
+
+        function stringGen() {
+            var result = '';
+            var input_length = 10;
+            chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            for (var i = 0; i < input_length; i++) {
+                result += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            return result;
+        };
+
+        var orderid = stringGen();
+        function sendmail(orderid, vno, stime, sdate, sname) {
+            var temparam = {
+                from_name: "SQUAD",
+                to_name: sname,
+                reg_no: vno,
+                message: orderid,
+                stime: stime,
+                sdate: sdate,
+            };
+            emailjs.send('service_3no95eb', 'template_218qlbf', temparam).then(function (res) {
+                console.log("Success", res.status);
+            });
+        }
+
+        function book() {
+            time();
+            sendmail();
+        }
+
+
+        function time() {
+            alert("Booking Succesfull");
+            alert("You have to reach there within 10 min, check your mail for more details");
+            var countDownDate = new Date().getTime() + 602000;
+            var x = setInterval(function () {
+                var now = new Date().getTime();
+                var distance = countDownDate - now;
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                document.getElementById("demo").innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("demo").innerHTML = "EXPIRED";
+                }
+            }, 1000);
+            // sendmail(orderid,document.getElementById('regn').value,document.getElementById('stime').value,document.getElementById('sdate').value,document.getElementById('sname').value);
+        }
+    </script>
+</body>
+
+</html>

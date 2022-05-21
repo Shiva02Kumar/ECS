@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-card" id="myNavbar">
+            <a href="#home" class="w3-bar-item w3-button w3-wide" style="font-size : 15px"><strong>EMVC</strong></a>
+            <!-- Right-sided navbar links -->
+            <div class="w3-right w3-hide-small">
+                <a href="index.html" class="w3-bar-item w3-button"><strong>HOME</strong></a>
+                <!-- <a href="#register" class="w3-bar-item w3-button" onclick="w3-close"><i class="fa fa-th"></i><strong>BOOK NOW</strong></a>
+                <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i><strong>PRICING</strong></a>
+                <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i><strong>TEAM</strong> </a> -->
+                <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i><strong>CONTACT</strong></a>
+            </div>
+            <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+                onclick="w3_open()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
+        style="display:none" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+        <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
+        <!-- <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+        <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a> -->
+        <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+    </nav>
+    <h1 ID="log">LOGIN</h1>
+    <div class="w3-container" id="signin">
+        <input type="text" name="username" placeholder="Username or Email" class="signbtn">
+        <input type="text" name="password" placeholder="Password" class="signbtn">
+        <br>
+        <!-- <button class="signbtn">LOGIN</button> -->
+        <div>
+            <button class="w3-button w3-black w3-padding-large rndbtn"><a href="dashboard.html" class="link">Login</a></button>
+            <!-- <button class="w3-button w3-black w3-padding-large rndbtn"><a href="signup.html" class="link">SignUp</a></button> -->
+        </div>
+        <p>----or----</p>
+        <a href="signup.html">Create a new account?</a>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="w3-container w3-light-grey" style="padding:75px 16px" id="contact">
+        <h3 class="w3-center"><u><strong>Contact Us</strong></u></h3>
+        <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+        <div style="margin-top:48px">
+            <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Delhi, India</p>
+            <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +91 9717368616</p>
+            <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+            <br>
+            <form action="/action_page.php" target="_blank">
+                <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+                <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+                <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+                <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+                <p>
+                    <button class="w3-button w3-black" type="submit"><i class="fa fa-paper-plane"></i> SEND MESSAGE</button>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64">
+        <a href="#log" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <div class="w3-xlarge w3-section">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+        <p>Powered by SQUAD</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
